@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+body{
+    perspective: 600px;}
+.parent{
+    transform-style: preserve-3d;
+    margin: 150px 0px 0px 570px;
+    position: relative;
+    transition: all 2s;}
+.div-back,.div-front,.parent{
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;}
+.div-front{
+    background: url(../images/png-clipart-gold-coin-dime-indian-head-gold-pieces-gold-dollar-double-eagle-gold-coin-medal.png) no-repeat center;
+    z-index: 1;
+    backface-visibility: hidden;}
+.div-back{
+    background: url(../images/png-clipart-american-gold-eagle-bullion-coin-gold-coin-coins-medal-bullion-thumbnail.png) no-repeat center;
+    transform: rotateY(180deg);}
+.div-front,.div-back{
+    background-size: cover;
+    position: absolute;}
+.parent:hover{
+    transform: rotateY(180deg);}
